@@ -1,7 +1,9 @@
 import './globals.css'
 import type { Metadata } from 'next'
 import { Inter, Space_Grotesk } from 'next/font/google'
-import NavBar from './components/NavBar'
+import { Toaster } from 'react-hot-toast'
+
+import NavBar from '../components/NavBar'
 
 const inter = Inter({ subsets: ['latin'] })
 const spaceGrotesk = Space_Grotesk({ 
@@ -20,13 +22,17 @@ export default function RootLayout({
   children: React.ReactNode
 }) {
   return (
-    <html lang="en">
-      <body className={inter.className}>
-        <NavBar/>
-        <main className='max-w-10xl mx-auto'>
-                {children}
-        </main>
-        </body>
-    </html>
+        <>
+                <html lang="en">
+                <body className={inter.className}>
+                        <Toaster />
+                        <NavBar/>
+                        <main className='max-w-10xl mx-auto'>
+                                {children}
+                        </main>
+                        </body>
+                </html>
+        </>
+
   )
 }

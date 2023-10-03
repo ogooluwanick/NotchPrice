@@ -12,7 +12,7 @@ const NavBar = () => {
                         </p>
                 </Link>
 
-                <div className="flex items-center gap-5">
+                <div className="flex items-center gap-5 max-sm:gap-2">
                         {
                                 [ 
                                         { src: '/assets/icons/search.svg', alt: 'search' },
