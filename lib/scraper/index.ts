@@ -37,11 +37,11 @@ export async function scrapeAmazonProduct(url: string) {
                 );
 
                 const originalPrice = extractPrice(
-                $('#priceblock_ourprice'),
-                $('.a-price.a-text-price span.a-offscreen'),
-                $('#listPrice'),
-                $('#priceblock_dealprice'),
-                $('.a-size-base.a-color-price')
+                        $('#priceblock_ourprice'),
+                        $('.a-price.a-text-price span.a-offscreen'),
+                        $('#listPrice'),
+                        $('#priceblock_dealprice'),
+                        $('.a-size-base.a-color-price')
                 );
 
                 const outOfStock = $('#availability span').text().trim().toLowerCase() === 'currently unavailable';
